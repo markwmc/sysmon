@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  python-backend:
+    build:
+      context: ./python-backend
+    container_name: python_backend
+  node-backend:
+    build:
+      context: ./node-backend
+    container_name: node-backend
+    ports:
+      - "8080:8080"
+  react-frontend:
+    build:
+      context: ./react-frontend
+    container_name: react_frontend
+    ports:
+      - "3000:3000"
